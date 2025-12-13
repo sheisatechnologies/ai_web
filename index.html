@@ -30,6 +30,50 @@
         <link rel="stylesheet" href="assets/css/nice-select.css">
         <!--<< Main.css >>-->
         <link rel="stylesheet" href="assets/css/main.css">
+
+        <style>
+            .video-bg-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Dark overlay for readability */
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 2;
+}
+
+.video-bg-section .container {
+    position: relative;
+    z-index: 3;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .bg-video {
+        display: none;
+    }
+    .video-bg-section {
+        background: url('assets/img/home-3/hero/hero-bg.png') center/cover no-repeat;
+    }
+}
+
+        </style>
     </head>
     <body>
 
@@ -260,7 +304,7 @@
     
     <!-- Background Video -->
     <video class="bg-video" autoplay muted loop playsinline>
-        <source src="assets/video/ai-bg.mp4" type="video/mp4">
+        <source src="assets/video/ai.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
@@ -297,7 +341,7 @@
 
             <div class="col-lg-6">
                 <div class="hero-image wow fadeInUp" data-wow-delay=".3s">
-                    <img src="assets/img/home-3/hero/hero-image.jpg" alt="img">
+                    <!-- <img src="assets/img/home-3/hero/hero-image.jpg" alt="img"> -->
                 </div>
             </div>
         </div>
